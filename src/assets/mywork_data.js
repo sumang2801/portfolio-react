@@ -11,7 +11,7 @@ const mywork_data = [
         w_name:"Web design",
         w_img:project1_img,
         url:'https://github.com/ghondaygrg/Aapp',
-        url2:'https://aapp-gurungsus-projects.vercel.app/',
+        url2:'https://salon-git-main-gurungsus-projects.vercel.app/',
     },
     {
         w_no:2,
