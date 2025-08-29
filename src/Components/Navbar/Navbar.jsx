@@ -1,55 +1,87 @@
-import React, { useRef, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css'
-import logo2 from '../../assets/logo2.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import menu_open from '../../assets/menu_open.svg'
-import menu_close from '../../assets/menu_close.svg'
+import logoSGClassic from '../../assets/logo-sg-classic.svg';
 
-
- 
 const Navbar = () => {
-  const [menu, setMenu]=useState('home');
-  const menuRef = useRef();
-  const openMenu=()=>{
-    menuRef.current.style.right='0px';
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
   }
-  const closeMenu=()=>{ 
-    menuRef.current.style.right='-350px';
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
   }
+
   return (
-    <div className='navbar'>
-        <img src={logo2} alt="" />
-        <img src={menu_open} onClick={openMenu} alt='' className='nav-mob-open'/>
+    <nav className={`modern-navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-brand">
+          <AnchorLink href='#home' className='brand-link' onClick={closeMenu}>
+            <img src={logoSGClassic} alt="SG Logo" className="navbar-logo" style={{height: '56px', width: '56px', marginRight: '8px'}} />
+          </AnchorLink>
+        </div>
 
-    <ul ref={menuRef} className="nav-menu">
-      <img src={menu_close} onClick={closeMenu} alt='' className='nav-mob-close' />
-      
-        <li><AnchorLink className='anchor-link' href='#home'>
-          <p onClick= {()=>setMenu('home')}>Home</p>
-          </AnchorLink>{menu==='home'?<img src='--' alt=''/>:<></>}</li>
+        {/* Desktop Menu */}
+        <div className="navbar-menu">
+          <AnchorLink href='#home' className='nav-link' onClick={closeMenu}>
+            <span className="nav-text">Home</span>
+          </AnchorLink>
+          <AnchorLink href='#project' className='nav-link' onClick={closeMenu}>
+            <span className="nav-text">Projects</span>
+          </AnchorLink>
+          <AnchorLink href='#about' className='nav-link' onClick={closeMenu}>
+            <span className="nav-text">Skills</span>
+          </AnchorLink>
+          <AnchorLink href='#footer' className='nav-link' onClick={closeMenu}>
+            <span className="nav-text">Contact</span>
+          </AnchorLink>
+        </div>
 
+        {/* Mobile Menu Toggle */}
+        <div 
+          className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-        <li><AnchorLink className='anchor-link' offset={50} href='#about'>
-          <p onClick= {()=>setMenu('about')}>Skills</p>
-          </AnchorLink>{menu==='about'?<img src= '--' alt=''/>:<></>}</li>
-
-
-
-        <li><AnchorLink className='anchor-link' offset={50} href='#project'>
-          <p onClick= {()=>setMenu('project')}>Project</p>
-          </AnchorLink>{menu==='project'?<img src='--'alt=''/>:<></>}</li>
-
-        
-
-          <li><AnchorLink className='anchor-link' offset={50} href='#footer'>
-          <p onClick= {()=>setMenu('footer')}>Contact</p>
-          </AnchorLink>{menu==='footer'?<img src='--'alt=''/>:<></>}</li>
-
-          
-        
-    </ul> 
-
-   </div>
+        {/* Mobile Menu Overlay */}
+        <div className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`}>
+          <div className="mobile-menu-content">
+            <AnchorLink href='#home' className='mobile-nav-link' onClick={closeMenu}>
+              <span className="mobile-nav-number">01</span>
+              <span className="mobile-nav-text">Home</span>
+            </AnchorLink>
+            <AnchorLink href='#project' className='mobile-nav-link' onClick={closeMenu}>
+              <span className="mobile-nav-number">02</span>
+              <span className="mobile-nav-text">Projects</span>
+            </AnchorLink>
+            <AnchorLink href='#about' className='mobile-nav-link' onClick={closeMenu}>
+              <span className="mobile-nav-number">03</span>
+              <span className="mobile-nav-text">Skills</span>
+            </AnchorLink>
+            <AnchorLink href='#footer' className='mobile-nav-link' onClick={closeMenu}>
+              <span className="mobile-nav-number">04</span>
+              <span className="mobile-nav-text">Contact</span>
+            </AnchorLink>
+          </div>
+        </div>
+      </div>
+    </nav>
   )
 }
 

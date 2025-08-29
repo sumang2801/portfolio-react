@@ -1,47 +1,47 @@
 import React from 'react'
 import './Hero.css'
-import profile_img from '../../assets/profile_img.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Work from '../Work/Work'
 
 
 const Hero = () => {
   return (
-<div id='home' className='hero'>
-  
-      <div className='hero-sections'>
-        <div className='hero-left'>
-
-        </div><img src={profile_img} alt="" />
-        <div className='hero-right'>
-
-          <div className='hero-para'>
-            <h1> <span >I am suman, front end developer base in usa</span></h1>
-            <p>Recent Computer Science graduate from Grand Valley State
-              University with a passion for building robust,
-              user-centric software solutions.
-              Proficient in Java, C, C++, JavaScript,
-              and cross-platform mobile development (iOS/Android).</p>
-
-            <div className='hero-action'>
-              <div className="hero-resume"><p><a href="https://docs.google.com/document/d/1RCnpV_pWvHrgAY3HGDVSdAoOZXqLXOEK44Mm8kbM7Sg/edit?tab=t.0">Resume</a></p></div>
-
-              <div className='hero-connect'>
-                <AnchorLink className='anchor-link' offset={50} href='#project'> Scroll </AnchorLink></div>
-
-              
-            </div>
-
+    <section id="home" className="hero polished-hero">
+      <div className="hero-sections">
+        <div className="hero-left">
+          <div className="profile-img-wrapper">
+            <img src="/about_profile1_img.jpg?v=3" alt="Suman Ghonday profile" className="profile-img" />
+            <span className="profile-badge">Available for work</span>
           </div>
-
+        </div>
+        <div className="hero-right">
+          <div className="hero-para">
+            <h1 className="hero-title">
+              <span className="hero-highlight">Hello, I'm Suman</span>
+              <br />
+              <span className="hero-sub">Creative Frontend Developer & Digital Craftsman</span>
+            </h1>
+            <p className="hero-description">
+              Passionate about transforming ideas into <span className="emphasis">extraordinary digital experiences</span>. As a Computer Science graduate from Grand Valley State University, I specialize in building modern, responsive web applications that users love.<br />
+              <br />
+              I thrive on creating <span className="tech-highlight">pixel-perfect interfaces</span> and <span className="tech-highlight">seamless user journeys</span> using cutting-edge technologies like <span className="tech">React</span>, <span className="tech">JavaScript</span>, <span className="tech">TypeScript</span>, and <span className="tech">Node.js</span>.
+            </p>
+            <div className="hero-action polished-actions">
+              <a
+                href="https://docs.google.com/document/d/1RCnpV_pWvHrgAY3HGDVSdAoOZXqLXOEK44Mm8kbM7Sg/edit?tab=t.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-btn resume-btn"
+              >
+                <span>Download Resume</span>
+              </a>
+              <AnchorLink className="hero-btn work-btn" offset={50} href="#project">
+                <span>See My Work</span>
+              </AnchorLink>
+            </div>
+          </div>
         </div>
       </div>
-        
-
-
-
-
-    </div>
+    </section>
   )
 }
 
