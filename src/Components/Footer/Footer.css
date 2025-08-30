@@ -522,57 +522,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    .footer {
-        padding: 50px 15px 25px;
-    }
-    
-    .footer-top {
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-logo {
-        font-size: 1.5rem;
-    }
-    
-    .footer-top-right h1 {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-    }
-    
-    .footer-top-left p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-    
-    .footer-contact-details {
-        gap: 12px;
-    }
-    
-    .contact-detail {
-        padding: 10px;
-        gap: 6px;
-        font-size: 0.9rem;
-    }
-    
-    .contact-detail img {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .footer-bottom {
-        padding-top: 25px;
-        gap: 12px;
-    }
-    
-    .footer-bottom p {
-        font-size: 0.85rem;
-    }
-    
-    .footer-bottom-right {
-        gap: 15px;
-    }
 /* Modern Responsive Design */
 @media (max-width: 768px) {
     .footer.modern-footer {

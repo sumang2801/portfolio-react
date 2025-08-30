@@ -742,9 +742,9 @@
       padding: 15px 30px;
       font-size: 1.3rem;
    }
-}
 
-@media(max-width: 480px){
+
+@media(max-width: 480px)
    .navbar{
       padding: 12px 20px;
    }
@@ -780,7 +780,6 @@
       font-size: 0.9rem;
       padding: 10px 15px;
    }
-}
 
 /* Enhanced Mobile Responsiveness */
 @media (max-width: 768px) {
