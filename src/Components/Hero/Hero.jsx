@@ -8,8 +8,8 @@ const Hero = () => {
     <section id="home" className="hero polished-hero">
       <div className="hero-sections">
         <div className="hero-left">
-          <div className="profile-img-wrapper">
-            <img src="/about_profile1_img.jpg?v=3" alt="Suman Ghonday profile" className="profile-img" />
+          <div className="profile-img-wrapper effect-pulse">
+            <img src="/about_profile1_img.jpg" alt="Suman Ghonday profile" className="profile-img" />
             <span className="profile-badge">Available for work</span>
           </div>
         </div>

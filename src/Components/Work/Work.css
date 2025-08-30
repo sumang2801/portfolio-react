@@ -171,6 +171,9 @@
     position: relative;
     height: 200px;
     overflow: hidden;
+    /* subtle floating motion for the project visuals */
+    animation: floatProject 6s ease-in-out infinite;
+    will-change: transform;
 }
 
 .project-image {
@@ -178,6 +181,19 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+}
+
+/* float animation for project section (keeps transform only) */
+@keyframes floatProject {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-image-container {
+        animation: none !important;
+    }
 }
 
 .project-card:hover .project-image {
