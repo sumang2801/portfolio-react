@@ -417,10 +417,10 @@
 
 .navbar-logo {
    display: inline-block;
-   height: 40px;
-   width: 40px;
+   height: 72px;
+   width: 72px;
    object-fit: contain;
-   margin-right: 8px;
+   margin-right: 12px;
 }
 
 .navbar-logo {
@@ -686,8 +686,8 @@
 }
    
    .navbar-logo img {
-      height: 35px;
-      width: 35px;
+      height: 44px;
+      width: 44px;
    }
    
    .nav-menu {

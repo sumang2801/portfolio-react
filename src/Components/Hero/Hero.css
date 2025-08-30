@@ -69,8 +69,8 @@
 .profile-img-wrapper::before {
     content: '';
     position: absolute;
-    width: 320px;
-    height: 320px;
+    width: 440px;
+    height: 440px;
     background: conic-gradient(from 0deg, #7c3aed, #3b82f6, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed);
     background-size: 400% 400%;
     animation: modernRotate 10s linear infinite;
@@ -86,8 +86,8 @@
 .profile-img-wrapper::after {
     content: '';
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
     border-radius: 20px;
     z-index: 3;
@@ -99,8 +99,8 @@
 }
 
 .profile-img {
-    width: 320px;
-    height: 320px;
+    width: 420px;
+    height: 420px;
     border-radius: 20px;
     object-fit: cover;
     object-position: center;
@@ -523,8 +523,8 @@
     }
     
     .hero-left img {
-        width: 280px;
-        height: 280px;
+        width: 360px;
+        height: 360px;
     }
     
     .hero-para h1 {
@@ -564,13 +564,13 @@
     }
     
     .hero-left::before {
-        width: 300px;
-        height: 300px;
+        width: 380px;
+        height: 380px;
     }
     
     .hero-left img {
-        width: 280px;
-        height: 280px;
+        width: 360px;
+        height: 360px;
     }
     
     .hero-right {
@@ -604,13 +604,13 @@
     }
     
     .hero-left::before {
-        width: 240px;
-        height: 240px;
+        width: 320px;
+        height: 320px;
     }
     
     .hero-left img {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
     }
     
     .hero-para h1 {

@@ -29,7 +29,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="navbar-brand">
           <AnchorLink href='#home' className='brand-link' onClick={closeMenu}>
-            <img src={logoSGClassic} alt="SG Logo" className="navbar-logo" style={{height: '56px', width: '56px', marginRight: '8px'}} />
+            <img src={logoSGClassic} alt="SG Logo" className="navbar-logo" style={{height: '72px', width: '72px', marginRight: '12px'}} />
           </AnchorLink>
         </div>
 
